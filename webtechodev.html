@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,81 +6,197 @@
 * {
   box-sizing: border-box;
 }
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body { background:rgb(30,30,40); }
+form { max-width:420px; margin:50px auto; }
+
+.feedback-input {
+  color:white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid black;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { border:2px solid black; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background:black;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+[type="submit"]:hover { background:#CC4949; }
+
+
+.botnav {
+  overflow: hidden;
+  background-color: #323437;
+}
+
+.botnav a {
+  float: left;
+  display: allow;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+ 
+.botnav a:hover {
+  background-color: #323437;
+  color: black;
+}
+
+
+
+
 
 body {
   font-family: Arial;
-  padding: 10px;
+  
   background: #f1f1f1;
 }
 
-
-
+/* Header/Blog Title */
+.header {
+  padding: 70px;
+  text-align: center;
+  background: black;
+  color: #FFFFFF;
+  height: 784;
+  wide:1900;
+}
 
 .header h1 {
   font-size: 50px;
+    color: #FFFFFF;
+
 }
+
+
+
+
 
 /* Style the top navigation bar */
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: #FFFFFF;
 }
 
 /* Style the topnav links */
 .topnav a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: #691010;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
-
+ 
 /* Change color on hover */
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: #691010;
   color: black;
-  text-align: center;
 }
 
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {   
-  float: left;
-  width: 75%;
-}
 
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  background-color: #f1f1f1;
-  padding-left: 20px;
-}
 
 /* Fake image */
 .fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-  text-align: center;
-  padding: 20px;
-  background: #ddd;
-  margin-top: 40px;
+  background-color: #FFFFFF;
+  
+  padding: 70px;
 }
 
-
-
-
-
-/* Footer */
-.footer {
+/* Add a card effect for articles */
+.card {
+  background-color: white;
   padding: 20px;
-  text-align: center;
-  background: #ddd;
   margin-top: 20px;
 }
 
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 30px;
+  text-align: center;
+  background: #999999;
+  margin-top: 500px;
+  
+  
+}
+.button {
+  background-color: #1B192D;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding:70px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
 </style>
 </head>
 <body>
@@ -87,41 +204,111 @@ body {
 
 
 <div class="topnav">
- 
-  <a href="#" >NAVIGATION BAR</a>
-  
+  <a href="#"style="float:right">Search</a>
+  <a href="#"style="float:right">More</a>
+  <a href="#"style="float:right">Contact</a>
+  <a href="#"style="float:right">Products</a>
 </div>
+<div class="header">
+  <h1>FEVER AUTO PARTS</h1>
+  <p>WAIT FOR BEST AUTO PARTS</p>
+  
+
+<button class="button">SEE MORE</button>
+
+
+</div>
+
 
 <div class="row">
-
-
-     
-      <div class="fakeimg" style="height:200px;">HEADER</div>
-     
+  <div class="column" style="background-color:#FFFFFF;">
+    <h2>Responsive</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </div>
+  <div class="column" style="background-color:#FFFFFF;">
+    <h2>Quality</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </div>
+  <div class="column" style="background-color:#FFFFFF;">
+    <h2>Support</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </div>
+</div>
+      
+      
+      
     </div>
     <div class="card">
+      <h2>PRODUCTS</h2>
+     
+      <div class="fakeimg" style="height:200px;">Image</div>
       
-      <div class="fakeimg" style="height:200px;">TITLE</div>
-    
+      
     </div>
   </div>
- 
+  <div class="rightcolumn">
     <div class="card">
-   
-      <div class="fakeimg"><p>PRODUCTS</p></div>
-      <div class="fakeimg"><p>BRANDS</p></div>
-      <div class="fakeimg"><p>PARTNER</p></div>
-      <div class="fakeimg"><p>CONTACT</p></div>
+      <h2>BRANDS</h2>
+      <div class="fakeimg" style="height:100px;">Image</div>
+      
     </div>
     <div class="card">
-
+      <h3>PARTNERS</h3>
+      <div class="fakeimg"><p>Image</p></div>
    
+    </div>
+    <div>
+      
     </div>
   </div>
 </div>
 
-<div class="footer">
-  <h2>Footer</h2>
+
+
+<form style="float:right">      
+  <input name="name" type="text" class="feedback-input" placeholder="Name" />   
+  <input name="email" type="text" class="feedback-input" placeholder="Email" />
+  <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+  <input type="submit" value="SUBMIT"/>
+</form>
+<div class="card">
+
+
+ <div class="card">
+      <h2>GET IN TOUCH</h2>
+      <h3>Find us at the office</h3>
+      Fever Auto Parts | Bostanci, Istanbul,Turkey
+      
+      
+      
+      <h2>Give us a ring</h2>
+      
+          <p>Mobile :+90 553 932 2287 </p>
+          <p> Mail: info@feverautoparts.com</p>
+          <p>  Mon – Fri, 9:00-19:00 </p>
+      
+      
+     
+      <div class="fakeimg" "></div>
+      
+      
+    </div>
+
+
+
+
+
+
+  <div class="botnav">
+  <a href="#"style="float:left ">Products  &nbsp;</a>
+  <a href="#"style="float:left">Contact &nbsp;</a>
+  <a href="#"style="float:left">More &nbsp;</a>
+  <a href="#"style="float:left">Search</a>
+  
+  </div>
+  
+  
+  
 </div>
 
 </body>
